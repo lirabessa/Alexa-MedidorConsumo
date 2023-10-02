@@ -1,0 +1,73 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "tipo",
+              "type": "TIPO"
+            },
+            {
+              "name": "mes",
+              "type": "AMAZON.Month"
+            },
+            {
+              "name": "ano",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "name": "ConsumoIntent",
+          "samples": [
+            "{tipo} {mes} {ano}",
+            "{tipo} {mes}",
+            "qual o consumo de {tipo} em {mes} de {ano}"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "ajuda",
+            "o que posso fazer aqui",
+            "como usar"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "água"
+              }
+            },
+            {
+              "name": {
+                "value": "luz"
+              }
+            },
+            {
+              "name": {
+                "value": "gás"
+              }
+            }
+          ],
+          "name": "TIPO"
+        }
+      ],
+      "invocationName": "medidor de consumo"
+    }
+  }
+}
